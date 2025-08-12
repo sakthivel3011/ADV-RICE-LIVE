@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT - SRI ANNAKAMATCHI TRADERS</title>
+    <link rel="icon" type="png" href="../images/logo/icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="rice-loader">
+                <div class="rice-grain"></div>
+                <div class="rice-grain"></div>
+                <div class="rice-grain"></div>
+                <div class="rice-grain"></div>
+            </div>
+        </div>
+
+
+    <!-- Payment Container -->
+    <div class="container payment-container animate__animated animate__fadeIn">
+        <div class="row">
+            <!-- Order Summary -->
+            <div class="col-lg-5">
+                <div class="order-summary-card animate__animated animate__fadeInLeft">
+                    <div class="card-header">
+                        <h2><i class="fas fa-receipt me-2"></i> Order Summary</h2>
+                        <div class="header-decoration"></div>
+                    </div>
+                    <div class="card-body">
+                        <div id="orderItems">
+                            <!-- Order items will be populated from JS -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="d-flex justify-content-between">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">₹0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Delivery:</span>
+                                <span id="delivery">₹50.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between total-row">
+                                <span>Total:</span>
+                                <span id="total">₹50.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="delivery-info animate__animated animate__fadeInUp">
+                            <i class="fas fa-truck"></i>
+                            <span>Expected delivery: 2-3 business days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="support-card animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="support-content">
+                        <h5>Need Help?</h5>
+                        <p>Our customer service is available 24/7</p>
+                        <a href="tel:+919442680989" class="support-phone">
+                            <i class="fas fa-phone-alt me-2"></i> +91 9442680989
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <div class="col-lg-7">
+                <div class="payment-form-card animate__animated animate__fadeInRight">
+                    <div class="card-header">
+                        <h2><i class="fas fa-credit-card me-2"></i> Payment Details</h2>
+                        <div class="header-decoration"></div>
+                    </div>
+                    <div class="card-body">
+                        <form id="paymentForm">
+                            <!-- Personal Info -->
+                            <div class="form-section">
+                                <h5 class="section-title"><i class="fas fa-file-invoice me-2"></i> Billing Information</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                            </div>
+
+                            <!-- Delivery Address -->
+                            <div class="form-section">
+                                <h5 class="section-title"><i class="fas fa-map-marker-alt me-2"></i> Delivery Address</h5>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Full Address</label>
+                                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="state" class="form-label">State</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="" selected disabled>Select State</option>
+                                            <option>Andhra Pradesh</option>
+                                            <option>Karnataka</option>
+                                            <option>Tamil Nadu</option>
+                                            <option>Kerala</option>
+                                            <option>Telangana</option>
+                                            <option>Maharashtra</option>
+                                            <option>Delhi</option>
+                                            <option>West Bengal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pincode" class="form-label">Pincode</label>
+                                        <input type="text" class="form-control" id="pincode" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="landmark" class="form-label">Landmark (Optional)</label>
+                                        <input type="text" class="form-control" id="landmark">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="form-section">
+                                <h5 class="section-title"><i class="fas fa-wallet me-2"></i> Payment Method</h5>
+                                <div class="payment-methods">
+                                    <div class="payment-option active" data-method="credit">
+                                        <div class="payment-icon">
+                                            <i class="far fa-credit-card"></i>
+                                        </div>
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                    <div class="payment-option" data-method="upi">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <span>UPI</span>
+                                    </div>
+                                    <div class="payment-option" data-method="netbanking">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <span>Net Banking</span>
+                                    </div>
+                                    <div class="payment-option" data-method="cod">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                        <span>Cash on Delivery</span>
+                                    </div>
+                                </div>
+
+                                <!-- Credit Card Form (shown by default) -->
+                                                               <!-- Credit Card Form (shown by default) -->
+                                <div class="payment-details" id="creditDetails">
+                                    <div class="mb-3">
+                                        <label for="cardNumber" class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                        <div class="invalid-feedback">Please enter a valid 16-digit card number.</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="expiryDate" class="form-label">Expiry Date</label>
+                                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                                            <div class="invalid-feedback">Please enter a valid expiry date in MM/YY format.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="cvv" class="form-label">CVV</label>
+                                            <input type="text" class="form-control" id="cvv" placeholder="123" maxlength="3">
+                                            <div class="invalid-feedback">Please enter a valid 3-digit CVV.</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cardName" class="form-label">Name on Card</label>
+                                        <input type="text" class="form-control" id="cardName">
+                                        <div class="invalid-feedback">Please enter the name on the card.</div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        const cardNumberInput = document.getElementById('cardNumber');
+                                        const expiryDateInput = document.getElementById('expiryDate');
+                                        const cvvInput = document.getElementById('cvv');
+                                
+                                        // Format Card Number (16 digits with spaces every 4 digits)
+                                        cardNumberInput.addEventListener('input', function () {
+                                            let value = cardNumberInput.value.replace(/\D/g, ''); // Remove non-digit characters
+                                            value = value.match(/.{1,4}/g)?.join(' ') || value; // Add spaces every 4 digits
+                                            cardNumberInput.value = value;
+                                        });
+                                
+                                        // Restrict Expiry Date to MM/YY format
+                                        expiryDateInput.addEventListener('input', function () {
+                                            let value = expiryDateInput.value.replace(/\D/g, ''); // Remove non-digit characters
+                                            if (value.length > 2) {
+                                                value = value.slice(0, 2) + '/' + value.slice(2, 4); // Add '/' after MM
+                                            }
+                                            expiryDateInput.value = value.slice(0, 5); // Limit to 5 characters
+                                        });
+                                
+                                        // Restrict CVV to 3 digits
+                                        cvvInput.addEventListener('input', function () {
+                                            cvvInput.value = cvvInput.value.replace(/\D/g, '').slice(0, 3); // Allow only 3 digits
+                                        });
+                                
+                                        // Form validation on submit
+                                        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+                                            e.preventDefault(); // Prevent form submission for validation
+                                
+                                            let isValid = true;
+                                
+                                            // Validate Card Number (16 digits)
+                                            const cardNumber = cardNumberInput.value.replace(/\s+/g, ''); // Remove spaces
+                                            if (cardNumber.length !== 16) {
+                                                cardNumberInput.classList.add('is-invalid');
+                                                isValid = false;
+                                            } else {
+                                                cardNumberInput.classList.remove('is-invalid');
+                                            }
+                                
+                                            // Validate Expiry Date (MM/YY)
+                                            const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+                                            if (!expiryDateRegex.test(expiryDateInput.value)) {
+                                                expiryDateInput.classList.add('is-invalid');
+                                                isValid = false;
+                                            } else {
+                                                expiryDateInput.classList.remove('is-invalid');
+                                            }
+                                
+                                            // Validate CVV (3 digits)
+                                            if (cvvInput.value.length !== 3) {
+                                                cvvInput.classList.add('is-invalid');
+                                                isValid = false;
+                                            } else {
+                                                cvvInput.classList.remove('is-invalid');
+                                            }
+                                
+                                            // If all fields are valid, submit the form
+                                            if (isValid) {
+                                                alert('Payment details are valid!');
+                                                this.submit();
+                                            }
+                                        });
+                                    });
+                                </script>
+
+                                <!-- UPI Form -->
+                                <div class="payment-details" id="upiDetails" style="display: none;">
+                                    <div class="mb-3">
+                                        <label for="upiId" class="form-label">UPI ID</label>
+                                        <input type="text" class="form-control" id="upiId" placeholder="yourname@upi">
+                                    </div>
+                                    <div class="upi-apps">
+                                        <div class="upi-app active">
+                                            <img src="https://via.placeholder.com/40" alt="GPay">
+                                        </div>
+                                        <div class="upi-app">
+                                            <img src="https://via.placeholder.com/40" alt="PhonePe">
+                                        </div>
+                                        <div class="upi-app">
+                                            <img src="https://via.placeholder.com/40" alt="Paytm">
+                                        </div>
+                                        <div class="upi-app">
+                                            <img src="https://via.placeholder.com/40" alt="BHIM">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Net Banking Form -->
+                                <div class="payment-details" id="netbankingDetails" style="display: none;">
+                                    <div class="mb-3">
+                                        <label for="bank" class="form-label">Select Bank</label>
+                                        <select class="form-select" id="bank">
+                                            <option selected disabled>Choose your bank</option>
+                                            <option>State Bank of India</option>
+                                            <option>HDFC Bank</option>
+                                            <option>ICICI Bank</option>
+                                            <option>Axis Bank</option>
+                                            <option>Punjab National Bank</option>
+                                            <option>Bank of Baroda</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- COD Message -->
+                                <div class="payment-details" id="codDetails" style="display: none;">
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        Pay with cash when your order is delivered. An extra ₹20 may be charged for COD orders.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">
+                                    I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-pay-now">
+                                <span class="btn-text">Pay Now</span>
+                                <span class="btn-icon"><i class="fas fa-lock"></i></span>
+                                <span class="btn-amount" id="payNowAmount">₹0.00</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Order Acceptance</h6>
+                    <p>Your order will be confirmed once payment is verified. We reserve the right to refuse or cancel any order for any reason.</p>
+                    
+                    <h6>Pricing</h6>
+                    <p>All prices are in Indian Rupees (₹). We reserve the right to change prices without notice.</p>
+                    
+                    <h6>Delivery</h6>
+                    <p>Delivery times are estimates and not guaranteed. We are not responsible for delays beyond our control.</p>
+                    
+                    <h6>Returns</h6>
+                    <p>Damaged or incorrect items must be reported within 48 hours of delivery. Returns are subject to inspection.</p>
+                    
+                    <h6>Privacy</h6>
+                    <p>Your personal information will be used only for order processing and not shared with third parties.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal">
+                <div class="modal-body text-center p-5">
+                    <div class="success-animation">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                    <h3 class="mt-4 mb-3">Payment Successful!</h3>
+                    <p class="mb-4">Thank you for your order. Your payment has been processed successfully.</p>
+                    <p class="order-number">Order #: <span id="orderNumber">SAT2025-</span></p>
+                    <button type="button" class="btn btn-continue" data-bs-dismiss="modal">
+                       customer feedback <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                    <button type="button" class="btn btn-receipt" data-bs-dismiss="modal">
+                        Bill or Receipt <i class="fas fa-file-invoice ms-2"></i>
+                    </button>
+                    <p class="mt-3 text-muted">Your bill has been sent to your registered email address.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-about">
+                       
+                        <h3 class="footer-brand">SRI ANNAKAMATCHI TRADERS</h3>
+                        <p class="footer-about-text">Providing premium quality rice with traditional values and modern standards since 2015.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-seedling"></i> Products</a></li>
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> About Us</a></li>
+                        <li><a href="#quality"><i class="fas fa-seedling"></i> Quality</a></li>
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="payment.html"><i class="fas fa-seedling"></i> Payment</a></li>
+                        <li><a href="bill.html"><i class="fas fa-seedling"></i> Receipt</a></li>
+                        <li><a href="signup.html"><i class="fas fa-seedling"></i> Signup</a></li>
+                        <li><a href="ordertracking.html"><i class="fas fa-seedling"></i> Order Tracking</a></li>
+                        <li><a href="orders.html"><i class="fas fa-seedling"></i> Orders</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">Get updates on new products and special offers.</p>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps?q=65/1+NN.+Pettai+Street,+Dharapuram,+Tiruppur+-+638356" target="_blank" rel="noopener noreferrer">
+                                65/1, NN. Pettai Street, Dharapuram, Tiruppur - 638356
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919442680989">+91 9442680989</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Sriannakamatchitraders@gmail.com">Sriannakamatchitraders@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p class="copyright-text">© <span class="current-year">2025</span> SRI ANNAKAMATCHI TRADERS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="../css/footers.css">
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="../js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDERS - SRI ANNAKAMATCHI TRADERS</title>
+    <link rel="icon" type="png" href="../images/logo/icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
+            <!-- Preloader -->
+            <div class="preloader">
+                <div class="rice-loader">
+                    <div class="rice-grain"></div>
+                    <div class="rice-grain"></div>
+                    <div class="rice-grain"></div>
+                    <div class="rice-grain"></div>
+                </div>
+            </div>
+    <!-- Header Banner -->
+    <div class="top-banner py-5 mb-5" style="background: url('../images/all/home1.jpg') no-repeat center center/cover;">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center text-white">
+                    <h1 class="rice-title mb-3 animate__animated animate__fadeInDown" style="font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+                        Discover the Premium Rice Collection
+                    </h1>
+                    <p class="rice-subtitle mb-4 animate__animated animate__fadeInUp" style="font-size: 1.25rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+                        Farm Fresh • Handpicked • Nutrient Rich
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeIn" style="animation-delay: 0.3s;">
+                        <a href="#products" class="btn btn-warning px-5 py-3 rounded-pill fw-bold shadow-lg" style="font-size: 1.1rem;">
+                            Shop Now <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="http://127.0.0.1:5500/frontend/assets/views/products.html" class="btn btn-outline-light px-5 py-3 rounded-pill shadow-lg" style="font-size: 1.1rem;">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-3" style="color: var(--primary-color);">Select Your Premium Rice</h2>
+                    <p class="text-muted">Choose from our selection of premium quality rice varieties, sourced directly from the finest fields.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Product Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp">
+                        <div class="product-image">
+                            <img src="../images/orders/1.jpg" alt="Basmati Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                            
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Classic Basmati Rice</h3>
+                            <p class="product-desc"><b>Long-grain, aromatic; ideal for biryani.</b></p>
+                            <p class="product-price">₹200 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="basmati" data-price="40">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                        <div class="product-image">
+                            <img src="../images/product/2.jpg" alt="Brown Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                           
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Sona Masuri</h3>
+                            <p class="product-desc"><b>Medium-grain, lightweight; daily use.</b></p>
+                            <p class="product-price">₹77 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="brown" data-price="50">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <div class="product-image">
+                            <img src="../images/product/3.jpg" alt="Jasmine Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                           
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ponni Rice</h3>
+                            <p class="product-desc"><b>Soft-boiled rice; popular in South India.</b></p>
+                            <p class="product-price">₹120 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="jasmine" data-price="45">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <!-- Product Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                        <div class="product-image">
+                            <img src="../images/product/4.jpg" alt="Black Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                            
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Jeera Samba</h3>
+                            <p class="product-desc"><b>Small-grain, aromatic; used in biryani.</b></p>
+                            <p class="product-price">₹175 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="black" data-price="65">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <div class="product-image">
+                            <img src="../images/product/5.jpg" alt="Red Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                            
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gobindobhog rice</h3>
+                            <p class="product-desc"><b>Short-grain, fragrant; used in sweets.</b></p>
+                            <p class="product-price">₹150 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="red" data-price="55">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                        <div class="product-image">
+                            <img src="../images/orders/6.avif" alt="Sona Masoori Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                           
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Matta (Kerala Red)</h3>
+                            <p class="product-desc"><b>Nutrient-rich red rice; earthy flavor.</b></p>
+                            <p class="product-price">₹130 per kg</p>
+                            
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            
+                            <button class="add-cart-btn" data-product="sona" data-price="35">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                        <div class="product-image">
+                            <img src="../images/orders/7.jpg" alt="Golden Sella Basmati Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Rajamudi Rice  </h3>
+                            <p class="product-desc"><b>Traditional red rice; unpolished.</b></p>
+                            <p class="product-price">₹285 per kg</p>
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            <button class="add-cart-btn" data-product="golden-sella" data-price="60">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
+                        <div class="product-image">
+                            <img src="../images/orders/8.jpg" alt="Matta Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Idli Rice</h3>
+                            <p class="product-desc"><b>Specially processed for soft and fluffy idlis.</b></p>
+                            <p class="product-price">₹77 per kg</p>
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            <button class="add-cart-btn" data-product="matta" data-price="55">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card animate__animated animate__fadeInUp" style="animation-delay: 0.8s;">
+                        <div class="product-image">
+                            <img src="../images/orders/9.jpg" alt="Sticky Rice" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Kolam Rice</h3>
+                            <p class="product-desc"><b>Soft texture; used for everyday meals.</b></p>
+                            <p class="product-price">₹90 per kg</p>
+                            <div class="quantity-selector">
+                                <div class="quantity-btn" data-kg="5">5 kg</div>
+                                <div class="quantity-btn" data-kg="10">10 kg</div>
+                                <div class="quantity-btn" data-kg="26">26 kg</div>
+                                <div class="quantity-btn" data-kg="75">75 kg</div>
+                            </div>
+                            <button class="add-cart-btn" data-product="sticky" data-price="70">
+                                <span>Add to Cart</span>
+                                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Cart Button -->
+    <button id="cartBtn" class="pulse">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="close-cart">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="cart-header">
+                <h4 class="mb-0">Your Shopping Cart</h4>
+            </div>
+            <div id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalAmount">₹0</span>
+            </div>
+            <button class="checkout-btn">
+                Proceed to Checkout <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Add to Cart Success Notification -->
+    <div class="add-success">
+        <i class="fas fa-check-circle me-2"></i> Added to cart successfully!
+    </div>
+
+
+    </div>
+        <footer class="footer">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-about">
+                       
+                        <h3 class="footer-brand">SRI ANNAKAMATCHI TRADERS</h3>
+                        <p class="footer-about-text">Providing premium quality rice with traditional values and modern standards since 2015.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-seedling"></i> Products</a></li>
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> About Us</a></li>
+                        <li><a href="#quality"><i class="fas fa-seedling"></i> Quality</a></li>
+                        <li><a href="index.html"><i class="fas fa-seedling"></i> Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="payment.html"><i class="fas fa-seedling"></i> Payment</a></li>
+                        <li><a href="bill.html"><i class="fas fa-seedling"></i> Receipt</a></li>
+                        <li><a href="signup.html"><i class="fas fa-seedling"></i> Signup</a></li>
+                        <li><a href="ordertracking.html"><i class="fas fa-seedling"></i> Order Tracking</a></li>
+                        <li><a href="orders.html"><i class="fas fa-seedling"></i> Orders</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">Get updates on new products and special offers.</p>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps?q=65/1+NN.+Pettai+Street,+Dharapuram,+Tiruppur+-+638356" target="_blank" rel="noopener noreferrer">
+                                65/1, NN. Pettai Street, Dharapuram, Tiruppur - 638356
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919442680989">+91 9442680989</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Sriannakamatchitraders@gmail.com">Sriannakamatchitraders@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p class="copyright-text">© <span class="current-year">2025</span> SRI ANNAKAMATCHI TRADERS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="../css/footers.css">
+
+    
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/orders.js"></script>
+
+    
+</body>
+</html>
