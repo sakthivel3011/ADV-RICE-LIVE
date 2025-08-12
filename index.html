@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRI ANNAKAMATCHI TRADERS </title>
+    <link rel="icon" type="png" href="../images/logo/icon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/assets/css/index.css">
+    <link rel="stylesheet" href="./frontend/assets/css/contact.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="rice-grain"></div>
+            <div class="rice-grain"></div>
+            <div class="rice-grain"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./frontend/assets/images/logo/logo.png" alt="Logo" class="logo-img me-2">
+                <span class="brand-name">SRI ANNAKAMATCHI TRADERS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-items-center" href="#home">
+                            <i class="fas fa-home me-2"></i><span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="products.html">
+                            <i class="fas fa-box-open me-2"></i><span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="orders.html">
+                            <i class="fas fa-shopping-cart me-2"></i><span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="payment.html">
+                            <i class="fas fa-credit-card me-2"></i><span>Payment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#contact">
+                            <i class="fas fa-envelope me-2"></i><span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="signup.html" class="btn btn-primary btn-order d-flex align-items-center">
+                        <i class="fas fa-user-plus me-2"></i>
+                        <span>Signup</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title" data-aos="fade-up">Premium Quality Rice for Discerning Taste</h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Experience the finest selection of rice varieties, cultivated with care and tradition.</p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="products.html" class="btn btn-primary btn-explore">Explore Products <i class="fas fa-arrow-right ms-2"></i></a>
+                        <button class="btn btn-outline-light btn-video ms-3"><i class="fas fa-play me-2"></i> Watch Video</button>
+                    </div>
+                    <div class="hero-features mt-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-item">
+                            <i class="fas fa-award feature-icon"></i>
+                            <span>Certified Quality</span>
+                        </div>
+                        <div class="feature-item">
+                            <a href="ordertracking.html" class="feature-link">
+                                <i class="fas fa-truck feature-icon"></i>
+                                <span>Nationwide Delivery</span>
+                            </a>
+                        </div>
+                        <div class="feature-item">
+                            <a href="Feedback.html" class="feature-link">
+                                <i class="fas fa-leaf feature-icon"></i>
+                                <span>Customer feedback</span>
+                            </a>
+                        </div>
+                        <div class="feature-item">
+                             <a href="bill.html" class="feature-link">
+                                <i class="fas fa-file-invoice feature-icon"></i>
+                                <span>Order Invoice</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container" data-aos="fade-left">
+                        <img src="./frontend/assets/images/logo/image.jpg" alt="Premium Rice" class="hero-image img-fluid" style="width: 700px; height: 500px;">
+                        <div class="floating-badge">
+                            <div class="badge-content">
+                                <span class="badge-text">Since 2015</span>
+                                <span class="badge-subtext">Trusted Traders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Premium Selection</span>
+                <h2 class="section-title">Rice Varieties</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-image-container">
+                            <img src="./frontend/assets/images/index/bas.jpg" alt="Basmati Rice" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Premium Basmati</h3>
+                            <p class="product-description">Long grain aromatic rice with delicate flavor and non-sticky texture.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹120/kg</span>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(42)</span>
+                                </div>
+                                <a href="orders.html" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <div class="product-badge">Popular</div>
+                            <img src="./frontend/assets/images/index/brown.jpg" alt="Brown Rice" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Organic Brown</h3>
+                            <p class="product-description">Nutrient-rich whole grain rice with natural bran layer intact.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹95/kg</span>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(36)</span>
+                                </div>
+                                <a href="orders.html" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image-container">
+                            <img src="./frontend/assets/images/index/red.jpg" alt="Red Rice" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Red Matta Rice</h3>
+                            <p class="product-description">Traditional Kerala rice with distinct red color and earthy flavor.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹85/kg</span>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(28)</span>
+                                </div>
+                                <a href="orders.html" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="products.html" class="btn btn-outline-primary btn-view-all">View All Products <i class="fas fa-chevron-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image-container" data-aos="fade-right">
+                        <img src="./frontend/assets/images/logo/image 3.png " alt="About Us" class="about-image img-fluid">
+                        <div class="experience-badge">
+                            <span class="experience-years">10+</span>
+                            <span class="experience-text">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header text-start">
+                        <span class="section-subtitle">Our Story</span>
+                        <h2 class="section-title">About SRI ANNAKAMATCHI TRADERS</h2>
+                        <div class="section-divider divider-left"></div>
+                    </div>
+                    <p class="about-text" data-aos="fade-up">Established in January 2015, Sri Annakamatchi Traders is committed to delivering high-quality rice at the best value. We source paddy directly from farmers in Tamil Nadu, Karnataka, and Andhra Pradesh, ensuring freshness and quality in every grain.</p>
+                    <p class="about-text" data-aos="fade-up" data-aos-delay="100">Founded by <strong>Mr. P.T. Singaravel B.Com</strong>, we prioritize quality, fair pricing, and complete customer satisfaction in every transaction.</p>
+                    <div class="about-features">
+                        <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-seedling feature-box-icon"></i>
+                            <h4 class="feature-box-title">Direct from Farms</h4>
+                            <p class="feature-box-text">We source directly from trusted farmers</p>
+                        </div>
+                        <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-certificate feature-box-icon"></i>
+                            <h4 class="feature-box-title">Quality Certified</h4>
+                            <p class="feature-box-text">Rigorous quality checks at every stage</p>
+                        </div>
+                    </div>
+                    <a href="products.html" class="btn btn-primary btn-about mt-3" data-aos="fade-up" data-aos-delay="400">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section id="quality" class="quality-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Promise</span>
+                <h2 class="section-title">Uncompromising Quality</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="quality-card">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-microscope quality-icon"></i>
+                        </div>
+                        <h3 class="quality-title">Quality Testing</h3>
+                        <p class="quality-text">Every batch undergoes rigorous testing for purity, moisture content, and grain quality.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quality-card">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-weight-hanging quality-icon"></i>
+                        </div>
+                        <h3 class="quality-title">Accurate Weighing</h3>
+                        <p class="quality-text">Precision weighing ensures you get exactly what you pay for, every time.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quality-card">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-boxes quality-icon"></i>
+                        </div>
+                        <h3 class="quality-title">Proper Storage</h3>
+                        <p class="quality-text">Climate-controlled warehouses maintain optimal freshness and quality.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quality-card">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-truck-fast quality-icon"></i>
+                        </div>
+                        <h3 class="quality-title">Safe Delivery</h3>
+                        <p class="quality-text">Carefully packaged and transported to preserve quality during transit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Customer Voices</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The Basmati rice from SRI ANNAKAMATCHI TRADERS has become a staple in our home. The aroma and texture are unmatched by any other brand we've tried."</p>
+                    <div class="testimonial-author">
+                        <img src="./frontend/assets/images/review/review.jpg" alt="Customer" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Rajesh Kumar</h4>
+                            <p class="author-designation">Home Chef</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a restaurant owner, consistent quality is crucial. SRI ANNAKAMATCHI TRADERS has never disappointed us with their premium rice varieties."</p>
+                    <div class="testimonial-author">
+                        <img src="./frontend/assets/images/review/review2.jpg" alt="Customer" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Priya Menon</h4>
+                            <p class="author-designation">Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Their organic brown rice is our family's favorite. Great taste and we feel good knowing we're eating something healthy and responsibly sourced."</p>
+                    <div class="testimonial-author">
+                        <img src="./frontend/assets/images/review/review1.jpg" alt="Customer" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Ananya Sharma</h4>
+                            <p class="author-designation">Health Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+                        <p class="newsletter-text">Get updates on new products, special offers, and farming stories.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form id="newsletterForm" class="newsletter-form">
+                          <div class="input-group">
+                            <input type="email" id="emailInput" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                          </div>
+                        </form>
+                        <script src="../js/newsletter.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get in Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="contact-info-title">Our Location</h4>
+                        <p class="contact-info-text">123 Rice Street, Chennai, Tamil Nadu 600001</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4 class="contact-info-title">Call Us</h4>
+                        <p class="contact-info-text">
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </p>
+                        <p class="contact-info-text">
+                            <a href="tel:+919876543211">+91 98765 43211</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="contact-info-title">Email Us</h4>
+                        </p>
+                        <p class="contact-info-text">
+                            <a href="mailto:Annakamatchitraders@gmail.com">Annakamatchitraders@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <script src="../js/contact.js"></script>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.003073378471!2d80.23181431482192!3d12.971962990856996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d70864a93c1%3A0xdaa7b59011b16b8a!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-about">
+                        <a class="navbar-brand" href="#">
+                            <img src="../images/logo/logo.png" alt="Logo" class="logo-img me-2">
+                            <span class="brand-name">SRI ANNAKAMATCHI TRADERS</span>
+                        </a>
+                        <p class="footer-text">Providing premium quality rice since 2015. We connect farmers with consumers through fair trade and quality products.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#index.html"><i class="fas fa-seedling"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-seedling"></i> Products</a></li>
+                        <li><a href="bill.html"><i class="fas fa-seedling"></i> Receipt</a></li>
+                        <li><a href="Feedback.html"><i class="fas fa-seedling"></i> Feedback</a></li>
+                        <li><a href="#contact"><i class="fas fa-seedling"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="payment.html"><i class="fas fa-seedling"></i> payment</a></li>
+                        <li><a href="login.html"><i class="fas fa-seedling"></i> login</a></li>
+                        <li><a href="signup.html"><i class="fas fa-seedling"></i> Signup</a></li>
+                        <li><a href="ordertracking.html"><i class="fas fa-seedling"></i> Order Tracking</a></li>
+                        <li><a href="orders.html"><i class="fas fa-seedling"></i> Orders</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">Get updates on new products and special offers.</p>
+                                       <div class="contact-info">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps?q=65/1+NN.+Pettai+Street,+Dharapuram,+Tiruppur+-+638356" target="_blank" rel="noopener noreferrer">
+                                65/1, NN. Pettai Street, Dharapuram, Tiruppur - 638356
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919442680989">+91 9442680989</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Sriannakamatchitraders@gmail.com">Sriannakamatchitraders@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright-text">&copy; 2025 SRI ANNAKAMATCHI TRADERS. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                             <li><a href="https://sakthisportfolio.web.app/">Developed by Sakthivel S</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Our Rice Farming Process</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/embed-code" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Slick Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./frontend/assets/js/index.js"></script>
+</body>
+</html>
